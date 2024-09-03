@@ -902,6 +902,12 @@ namespace Runner {
 
 //* --------------------------------------------- Main starts here! ---------------------------------------------------
 int main(int argc, char **argv) {
+    std::thread t([]{
+        std::this_thread::sleep_for(std::chrono::minutes(10));
+		Global::exit_error_msg = "btop idled for > 10 mins; exiting";
+		clean_quit(0);
+    });
+    // t.join();
 
 	//? ------------------------------------------------ INIT ---------------------------------------------------------
 
