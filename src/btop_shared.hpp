@@ -111,14 +111,15 @@ namespace Gpu {
 	extern vector<int> x_vec, y_vec;
 	extern vector<bool> redraw;
 	extern int shown;
-	extern vector<char> shown_panels;
+	extern int count;
+	extern vector<int> shown_panels;
 	extern vector<string> gpu_names;
 	extern vector<int> gpu_b_height_offsets;
 	extern long long gpu_pwr_total_max;
 
 	extern std::unordered_map<string, deque<long long>> shared_gpu_percent; // averages, power/vram total
 
-  const array mem_names { "used"s, "free"s };
+	const array mem_names { "used"s, "free"s };
 
 	//* Container for process information // TODO
 	/*struct proc_info {
